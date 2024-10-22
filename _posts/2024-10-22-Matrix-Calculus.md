@@ -2,7 +2,6 @@
 layout: post
 title:  "Matrix Calculus for Deep Learning"
 date:   2024-10-22
-categories: math deep learning machine learning matrix calculus
 ---
 
 ## Introduction
