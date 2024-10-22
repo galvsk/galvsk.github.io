@@ -137,7 +137,7 @@ $$
 This results in two Jacobians, depending on which of our inputs we are differentiating with respect to, $\frac{\partial\mathbf{y}}{\partial\mathbf{x}}$ and $\frac{\partial\mathbf{y}}{\partial a}$. The simpler case is $\frac{\partial\mathbf{y}}{\partial a}$, as we are differentiating with respect to a single scalar value:
 
 $$
-\begin{split:   
+\begin{split} 
 \frac{\partial\mathbf{y}}{\partial a} =
 \frac{\partial f(\mathbf{x} + a)}{\partial a} = 
 \begin{pmatrix}
