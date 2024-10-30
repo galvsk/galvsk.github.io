@@ -114,7 +114,7 @@ J = \nabla{\mathbf{f}}_\mathbf{x} =
 \end{split}
 $$
 
-For now, we will avoid making this more abstract by considering functions of higher rank objects (i.e., matrices), as the Jacobian will be a higher order tensor. In the following sections, we will look at the most common matrix calculus operations applicable to deep learning, defining the Jacobian for element-wise operations on vectors (e.g., scalar and vector addition, scalar and vector multiplication, and the application of an arbitrary non-linear function). We will also detail matrix-vector multiplication, here the Jacobian will be a third order tensor, but due to the simple linear nature of the operation, this high dimensional tensor will have a particularly friendly form.
+For now, we will avoid making this more abstract by considering functions of higher rank objects (i.e., tensors), as the Jacobian will be a higher order tensor. In the following sections, we will look at the most common matrix calculus operations applicable to deep learning, defining the Jacobian for element-wise operations on vectors (e.g., scalar and vector addition, scalar and vector multiplication, and the application of an arbitrary non-linear function). We will also detail matrix-vector multiplication, here the Jacobian will be a third order tensor, but due to the simple linear nature of the operation, this high dimensional tensor will have a particularly friendly form.
 
 ## Element-wise Operations
 
