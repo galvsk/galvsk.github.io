@@ -46,7 +46,7 @@ $$
 
 This Jacobian now parameterises how our output changes with respect to changes in either (or both) of our inputs. Now our vector valued Jacobian describes the slope of the tangent line in two-dimensions, which is still approximately linear in the neighbourhood of any valid $x_1$ and $x_2$.
 
-We could similarly consider a multivariate extension where we have a single scalar input, but our function is vector valued with two outputs. This can be thought of as having two separate mapping functions, $f_1 : \mathbb{R} \mapsto \mathbb{R}$ and $f_2 : \mathbb{R} \mapsto \mathbb{R}$, combined into a vector $\mathbf{f} : \mathbb{R}^2 \mapsto \mathbb{R}$, for example:
+We could similarly consider a multivariate extension where we have a single scalar input, but our function is vector valued with two outputs. This can be thought of as having two separate mapping functions, $f_1 : \mathbb{R} \mapsto \mathbb{R}$ and $f_2 : \mathbb{R} \mapsto \mathbb{R}$, combined into a vector $\mathbf{f} : \mathbb{R} \mapsto \mathbb{R}^2$, for example:
 
 $$
 \begin{split}
