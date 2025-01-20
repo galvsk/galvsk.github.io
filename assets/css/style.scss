@@ -1,0 +1,40 @@
+---
+---
+
+@import "minimal-mistakes";
+
+/* Custom styles */
+.page__content {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Code block styling */
+div.highlighter-rouge,
+figure.highlight {
+    background-color: #f6f8fa;
+    border-radius: 3px;
+    
+    pre.highlight {
+        background-color: transparent;
+    }
+}
+
+/* Optional: Make the text a bit wider on large screens */
+.page__content {
+    @media (min-width: 80em) {
+        padding-right: 100px;
+    }
+}
+
+/* Optional: Adjust font sizes */
+.archive__item-title {
+    font-size: 1.5em;
+}
+
+/* Optional: Better spacing for lists */
+.page__content {
+    ul, ol {
+        margin: 1em 0;
+    }
+}

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "Matrix Calculus for Deep Learning"
 date:   2024-10-22
 ---
