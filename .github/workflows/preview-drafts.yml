@@ -19,12 +19,7 @@ jobs:
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
-          destination: ./_site
+          destination: ./_site/drafts
           
-      - name: Deploy to drafts directory
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          destination_dir: drafts
-          publish_branch: main
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
