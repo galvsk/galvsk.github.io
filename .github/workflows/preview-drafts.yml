@@ -16,6 +16,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
+      - name: Move drafts to posts
+        run: |
+          mkdir -p _posts
+          cp _drafts/* _posts/
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
       
@@ -26,10 +31,8 @@ jobs:
           destination: ./_site
       
       - name: Deploy
-        if: success()
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
-          destination_dir: drafts
           publish_branch: main
