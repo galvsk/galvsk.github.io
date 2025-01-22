@@ -16,10 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Move drafts to posts
+      - name: Prepare drafts for build
         run: |
           mkdir -p _posts
-          cp _drafts/* _posts/
+          for file in _drafts/*; do
+            filename=$(basename "$file")
+            cp "$file" "_posts/$(date +%Y-%m-%d)-${filename}"
+          done
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -36,3 +39,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
           publish_branch: main
+          destination_dir: drafts
