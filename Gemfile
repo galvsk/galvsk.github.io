@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 # This will include all the necessary plugins for GitHub Pages
+gem "minimal-mistakes-jekyll"
 gem "github-pages", group: :jekyll_plugins
 gem "faraday-retry"
 

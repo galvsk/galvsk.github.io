@@ -1,42 +1,30 @@
-name: Preview Drafts
-
+name: Build and Deploy Drafts
 on:
   push:
     branches:
       - drafts
-  workflow_dispatch:
-
 permissions:
-  contents: write
+  contents: read
   pages: write
-
+  id-token: write
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      
-      - name: Prepare drafts for build
-        run: |
-          mkdir -p _posts
-          for file in _drafts/*; do
-            filename=$(basename "$file")
-            cp "$file" "_posts/$(date +%Y-%m-%d)-${filename}"
-          done
-      
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      
-      - name: Build
-        uses: actions/jekyll-build-pages@v1
+      - uses: actions/checkout@v3
+      - uses: actions/configure-pages@v3
+      - uses: ruby/setup-ruby@v1
         with:
-          source: ./
-          destination: ./_site
-      
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          publish_branch: main
-          destination_dir: drafts
+          ruby-version: '3.0'
+          bundler-cache: true
+      - run: bundle install
+      - run: bundle exec jekyll build
+      - uses: actions/upload-pages-artifact@v2
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v2
