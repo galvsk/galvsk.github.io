@@ -1,14 +1,13 @@
 source "https://rubygems.org"
 
-# This will include all the necessary plugins for GitHub Pages
-gem "minimal-mistakes-jekyll"
 gem "github-pages", group: :jekyll_plugins
+gem "minimal-mistakes-jekyll"  # for local development
+gem "jekyll-include-cache"
+gem "jekyll-remote-theme"
 gem "faraday-retry"
 
-# Required plugins for minimal-mistakes theme
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-include-cache"
   gem "jekyll-paginate"
   gem "jekyll-sitemap"
   gem "jekyll-gist"

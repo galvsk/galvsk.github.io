@@ -1,14 +1,16 @@
 # Site settings
 title: Galvin's ML blog
 email: galvin.s.k@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   Informal place to document general ML learnings
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://galvsk.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "https://galvsk.github.io"
 
 # Build settings
 theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+minimal_mistakes_skin: "dark"
 future: true
 sass:
   sass_dir: _sass
@@ -17,7 +19,7 @@ sass:
 # Site Author
 author:
   name: "Galvin Khara"
-  avatar: # add a path to an avatar image if you want
+  avatar:
   bio: "ML Researcher"
   location: "London, UK"
   links:
@@ -46,7 +48,6 @@ footer:
 
 # Defaults for posts
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
@@ -96,7 +97,7 @@ exclude:
   - vendor/ruby/
 
 # Pagination
-paginate: 5 # number of posts to show per page
+paginate: 5
 paginate_path: /page:num/
 
 # Search
