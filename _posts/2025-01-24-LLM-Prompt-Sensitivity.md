@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Unmasking Prompt Sensitivity in LLMs"
+title: "Benchmarks and Brittleness: Evaluating Frontier LLM Robustness"
 description: "Evaluating the zero-shot prompt sensitivity of Claude 3.5 Sonnet and DeepSeek-v3 on MMLU"
 ---
 
