@@ -9,7 +9,7 @@ url: "https://galvsk.github.io" # the base hostname & protocol for your site, e.
 # Build settings
 theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
+future: true
 sass:
   sass_dir: _sass
   style: compressed
